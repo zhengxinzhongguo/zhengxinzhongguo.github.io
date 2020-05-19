@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="./jscss/jquery.js"></script>
+    <script type="text/javascript" src="./jscss/garden.js"></script>
+    <script type="text/javascript" src="./jscss/functions.js"></script>
+
+<style>
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+	font-size: 85%;
+	margin: 0;
+	background-size: 100%;
+	background-repeat:no-repeat;
+	background:
+	radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+	radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+	radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+	radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+	radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+	radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+	radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+	radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+	radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+	radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+	background-color:#b03;
+	background-size:100px 100px;
+}
+h2 {
+	font-size: 220%;
+	font-weight: 400;
+}
+
+.content {
+	width: 100%;
+	text-align: center;
+}
+
+.timer {
+	font-size: 180%;
+	line-height: 1.5;
+	margin: 1em 0;
+}
+
+.timer b {
+	color: rgb(253, 99, 125);
+}
+</style>
+</head>
+
+<body>
+<div class="content">
+	<br>
+	<h2 style="font-weight:bolder;color:#2F0000">我们已经在一起了</h2>
+	<div class="timer" style="color:#2F0000;font-weight:bold">
+		<b id="d" style="color: #FFF0F0"></b> Days <b id="h" style="color: #FFF0F0"></b> Hours <b id="m" style="color: #FFF0F0"></b> Minutes <b id="s" style="color: #FFF0F0"></b> Seconds
+	</div>
+</div>
+	<div id="music"></div>
+	
+	<input type='button' value='第一页-->动作激情小电影' onclick='location.href=("./index.html")' style="position: fixed; left: 5px; top: 60px;" />
+	<input type='button' value='第三页-->消除烦躁小爱心' onclick='location.href=("./index2.html")' style="position: fixed; left: 5px; top: 90px;" />
+	<input type='button' value='猜你喜欢-->请播放嗨歌' onclick='song()' style="position: fixed; left: 5px; top: 120px;" />
+	
+	
+<div id="content"style="float: left; width:100% ;height:700px;left:0;top:0">
+        <div id="code"style="float: left; width:100% ;height:700px;top:200px;text-align: center">
+				<span class="comments" style="font-size:20px;color:#FFFFB4">/**</span><br>
+				<span class="comments" style="font-size:20px;color:#FFFFB4">* 表白520</span><br>
+				<span class="comments" style="font-size:20px;color:#FFFFB4">* @author zhengxin82</span><br>
+				<span class="comments" style="font-size:20px;color:#FFFFB4">* @Date 2020年05月19日21:32:43</span><br>
+				<span class="comments" style="font-size:20px;color:#FFFFB4">*/</span><br>
+				<br>
+                <span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">2018年05月13日的下午，</span><br>
+				<span class="comments" style="font-size:20px;color:#FFFFB4">// new girlFriend(lxy)</span><br>
+                <span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">我们在中蓝自习室里盖章画押，</span><br>
+                <span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">此后50年，你就是我的奴隶</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">主。</span><br>
+				<br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起去实验室学习，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起吃午饭，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起逛合生汇，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起去青岛，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起准备实习，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起找工作，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起去十渡，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起去迪士尼，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">一起……，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">还要一起上班，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">还要一起做饭，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">还要一起生活，</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">…………</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">郑鑫 love 刘晓雨!</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">郑鑫 love 刘晓雨!</span><br>
+				<span class="space"><span class="comments" style="font-weight:bolder;font-size:20px;color:#FFFFB4">郑鑫 love 刘晓雨!</span><br>
+            </span></span></span></span></span></span></span><span style="color:#FFFFB4">_</span>
+        </div>
+    </div>
+	<script >
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            adjustWordsPosition();
+            startHeartAnimation();
+        }, 10000);
+
+        $("#accept").click(function () {
+            $(this).hide();
+            $("#elapseClock").show();
+            var together = new Date();
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+        })
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
+<script>
+	function timer() {
+		var date1= '2018/05/13 13:00:00';  
+		var date2 = new Date();    
+		var date3 = date2.getTime() - new Date(date1).getTime();     
+		var days=Math.floor(date3/(24*3600*1000))
+		var leave1=date3%(24*3600*1000)
+		var hours=Math.floor(leave1/(3600*1000))
+		var leave2=leave1%(3600*1000)        
+		var minutes=Math.floor(leave2/(60*1000))
+		var leave3=leave2%(60*1000)     
+		var seconds=Math.round(leave3/1000)
+		document.getElementById('d').innerHTML = days;
+		document.getElementById('h').innerHTML = hours;
+		document.getElementById('m').innerHTML = minutes;
+		document.getElementById('s').innerHTML = seconds;
+	}
+	timer();
+	setInterval(timer, 1000);
+</script>
+<script>
+	function song() {
+		var arr=new  Array("温柔.mp3","知足.mp3","超人.mp3","倔强.mp3","派对动物.mp3","如果我们不曾相遇.mp3","人生海海.mp3","一颗苹果.mp3");
+		var idx=Math.round(Math.random()*1000%8);
+		document.getElementById('music').innerHTML = "<embed  src='./music/"+arr[idx]+"' loop='1' autostart=true width='0px' height='0px'/>";
+		}
+</script>
+</body>
+</html>
